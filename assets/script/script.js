@@ -659,16 +659,21 @@ console.log(moviesLastMillennium);
 */
 
 function sumAllTheYears(movies) {
-    let totalYears = 0;
-    for (let i = 0; i < movies.lenght; i++) {
-        totalYears += parseInt(movies[i].years, 10);
-    
-    }
-    return totalYears;
+    let totalSum = 0;
+
+    movies.forEach(movie => {
+        const year = parseInt(movie.Year); // Converte l'anno da stringa a numero intero
+        totalSum += year; // Aggiunge l'anno alla somma totale
+    });
+
+    return totalSum;
 }
-let total = sumAllTheYears(movies);
+
+// Test della funzione sumAllTheYears con l'array movies
+const totalYears = sumAllTheYears(movies);
+
 console.log('*-----Esercizio 16-----*')
-console.log(total);
+console.log("Somma di tutti gli anni:", totalYears);
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
