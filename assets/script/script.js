@@ -579,15 +579,15 @@ console.log(modifiedPerson);
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 function newestMovie(movies) {
-    // Controlliamo se l'array movies è vuoto
+    
     if (movies.length === 0) {
-        return null; // Se è vuoto, ritorniamo null
+        return null; // 
     }
     
-    // Inizializziamo la variabile per tenere traccia del film più recente
-    let newest = movies[0]; // Partiamo dal primo film come candidato più recente
     
-    // Iteriamo attraverso gli altri film per trovare il più recente
+    let newest = movies[0];
+    
+    
     for (let i = 1; i < movies.length; i++) {
         if (parseInt(movies[i].Year) > parseInt(newest.Year)) {
             newest = movies[i];
