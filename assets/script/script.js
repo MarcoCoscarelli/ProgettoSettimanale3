@@ -672,7 +672,7 @@ function sumAllTheYears(movies) {
 const totalYears = sumAllTheYears(movies);
 console.log("Somma di tutti gli anni:", totalYears);
 
-});
+
 
 
 /* ESERCIZIO 17
@@ -684,31 +684,121 @@ console.log("Somma di tutti gli anni:", totalYears);
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+
+function searchAndDivide(searchString) {
+   
+    let match = [];
+    
+    let unmatch = [];
+
+    
+    movies.forEach(movie => {
+       
+        if (movie.Title.toLowerCase().includes(searchString.toLowerCase())) {
+            match.push(movie); 
+        } else {
+            unmatch.push(movie); 
+        }
+    });
+
+    
+    return {
+        match: match,
+        unmatch: unmatch
+    };
+}
+const searchString = 'Lord';
+const result = searchAndDivide(searchString);
+console.log('*-----Esercizio 18-----*');
+console.log('Film che corrispondono alla ricerca:', result.match);
+console.log('Film che non corrispondono alla ricerca:', result.unmatch);
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(index) {
+    const updatedMovies = movies.filter((movie, i) => i !== index);
+    return updatedMovies;
+}
+const indexToRemove = 1;
+const updatedMovies = removeIndex(indexToRemove);
+console.log('*-----Esercizio 19-----*');
+console.log('Movies aggiornato dopo la rimozione:', updatedMovies);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+console.log('*-----Esercizio 20-----*');
+function selectContainerElement() {
+    const containerElement = document.getElementById('container');
+    return containerElement;
+}
+const container = selectContainerElement();
+if (container) {
+    console.log('Elemento con id "container" selezionato:', container);
+} else {
+    console.log('Nessun elemento trovato con id "container"');
+}
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+console.log('*-----Esercizio 21-----*')
+function selectAllTdElements() {
+    const tdElements = document.getElementsByTagName('td');
+    return tdElements;
+}
+const tdElements = selectAllTdElements();
+const tdArray = Array.from(tdElements);
+console.log('Numero totale di elementi <td>:', tdArray.length);
+tdArray.forEach((td, index) => {
+    console.log(`Contenuto della cella ${index + 1}:`, td.textContent);
+});
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-*/
+*/ 
+console.log('*-----Esercizio 22-----*')
+function printTdText() {
+    const tdElements = document.getElementsByTagName('td');
 
+    for (let i = 0; i < tdElements.length; i++) {
+        const tdText = tdElements[i].textContent.trim();
+        console.log(`Contenuto della cella ${i + 1}: ${tdText}`);
+    }
+}
+printTdText();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+console.log('*-----Esercizio 23-----*');
+
+function addRedBackgroundToLinks() {
+    const links = document.getElementsByTagName('a');
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.backgroundColor = 'red';
+    }
+}
+addRedBackgroundToLinks();
+
+
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+/*
+function addNewElementToList(text) {
+    newListItem.textContent = text;
+    const list = document.getElementById('myList');
+    list.appendChild(newListItem);
+}
+addNewElementToList('Nuovo elemento');
+/*
+
+
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
