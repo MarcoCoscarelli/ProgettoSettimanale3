@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     
+    
     const movies = [
         {
           Title: 'The Lord of the Rings: The Fellowship of the Ring',
@@ -117,8 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
         },
       ]
       
-    
-  
+    //FUNZIONE PER CONTARE IL NUMERO DI FILM
+     
+
 
     // Funzione per convertire un oggetto in una stringa formattata
     function objectToString(obj) {
@@ -578,43 +580,95 @@ console.log(modifiedPerson);
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
-function newestMovie(movies) {
     
-    if (movies.length === 0) {
-        return null; // 
-    }
-    
-    
-    let newest = movies[0];
-    
-    
-    for (let i = 1; i < movies.length; i++) {
-        if (parseInt(movies[i].Year) > parseInt(newest.Year)) {
-            newest = movies[i];
+    function newestMovie(movies) {
+        if (movies.length === 0) {
+            return null;
         }
-    }
-    
-    return newest;
-}
 
-let latestMovie = newestMovie(movies);
-let latestMovieElement = document.getElementById 
-console.log("Film più recente:", latestMovie);
+        let newest = movies[0];
+
+        for (let i = 1; i < movies.length; i++) {
+            if (parseInt(movies[i].Year) > parseInt(newest.Year)) {
+                newest = movies[i];
+            }
+        }
+
+        return newest;
+    }
+
+    
+    let latestMovie = newestMovie(movies);
+
+    
+    let latestMovieTitleElement = document.querySelector('#esercizio-12 .soluzione');
+    if (latestMovie) {
+        latestMovieTitleElement.textContent = `Il film più recente è "${latestMovie.Title}" (${latestMovie.Year})`;
+    } else {
+        latestMovieTitleElement.textContent = "Nessun film trovato.";
+    }
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+function countMovies(movies) {
+    return movies.filter(movie => movie.Type === 'movie').length;
+}
+    
+   
+    let movieCount = countMovies(movies);
+
+   
+    let movieCountElement = document.querySelector('#esercizio13 .soluzione');
+    if (movieCountElement) {
+        movieCountElement.textContent = `Il numero totale di film è ${movieCount}.`;
+        
+    }
+    console.log('*-----Esercizio 13-----*');
+        console.log(movieCount);
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+function onlyTheYears(movies) {
+    return movies.map(movie => movie.Year);
+}
+
+let yearsArray = onlyTheYears(movies);
+console.log('*-----Esercizio 14-----*')
+console.log(yearsArray);
+
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+function  onlyInLastMillennium(movies) {
+    return movies.filter(movie => {
+        let year = parseInt(movie.Year, 10);
+        return year >= 1900 && year <= 1999;
+    })
+}
+
+let moviesLastMillennium = onlyInLastMillennium(movies);
+console.log('*-----Esercizio 15-----*');
+console.log(moviesLastMillennium);
+
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+
+function sumAllTheYears(movies) {
+    let totalYears = 0;
+    for (let i = 0; i < movies.lenght; i++) {
+        totalYears += parseInt(movies[i].years, 10);
+    
+    }
+    return totalYears;
+}
+let total = sumAllTheYears(movies);
+console.log('*-----Esercizio 16-----*')
+console.log(total);
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
