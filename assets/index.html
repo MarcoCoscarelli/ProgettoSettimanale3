@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi Settimana 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="esercizio-a" class="esercizio">
+        <h2>Esercizio A</h2>
+    <p class="traccia">Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-b" class="esercizio">
+<h2>Esercizio B</h2>
+<p class="traccia">
+    Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
+  </p>
+  <p class="soluzione" id="random-number" >  </p>
+</div>
+<div id="esercizio-c" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia">Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-d" class="esercizio">
+    <h2>Esercizio D</h2>
+    <p class="traccia">Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.</p>
+    <p class="soluzione"></p>
+</div>
+</div>
+<div id="esercizio-e" class="esercizio">
+    <h2>Esercizio E</h2>
+    <p class="traccia">Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-f" class="esercizio">
+    <h2>Esercizio F</h2>
+    <p class="traccia"> Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-g" class="esercizio">
+    <h2>Esercizio G</h2>
+    <p class="traccia">Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-1" class="esercizio">
+    <h2>Esercizio Funzioni 1</h2>
+    <p class="traccia">Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-2" class="esercizio">
+    <div class="traccia">
+        <h2>Esercizio Funzioni 2</h2>
+        Crea una funzione "whoIsBigger" che ritorna il numero maggiore tra due numeri inseriti dall'utente.
+        <input type="number" id="number1" placeholder="Inserisci il primo numero">
+        <input type="number" id="number2" placeholder="Inserisci il secondo numero">
+    </div>
+    <div class="soluzione">
+    </div>
+</div>
+<div id="esercizio-3" class="esercizio">
+    <h2>Esercizio Funzioni 3</h2>
+    <p class="traccia">Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.</p>
+    <label for="inputPhrase"></label>
+    <input type="text" id="inputPhrase">
+    <button id="splitPhraseButton" >Dividi la frase</button>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-4" class="esercizio">
+    <h2>Esercizio Funzioni 4</h2>
+    <p class="traccia">Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
+        Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere</p>
+        <input type="text" id="inputString" placeholder="Inserisci una stringa">
+        <label><input type="checkbox" id="removeFirstCharacter"> Rimuovi primo carattere</label>
+        <button id="executeDeleteButton">Esegui</button>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-5" class="esercizio">
+    <h2>Esercizio Funzioni 5</h2>
+    <p class="traccia">         
+         Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
+        </p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-6" class="esercizio">
+    <h2>Esercizio Funzioni 6</h2>
+    
+    
+    <p class="traccia">Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.</p>
+    <input type="text" id="inputEmail" placeholder="inserisci un indirizzo Email">
+    <button id="checkEmailButton"></button>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-7" class="esercizio">
+    <h2>Esercizio Funzioni 7</h2>
+    <p class="traccia">Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.</p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-8" class="esercizio">
+    <h2>Esercizio Funzioni 8</h2>
+        <p class="traccia">Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
+         Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
+         il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
+         L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().</p>
+         <input type="number" id="numRolls" placeholder="Numero di lanci di dado">
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-9" class="esercizio">
+    <h2>Esercizio Funzioni 9</h2>
+    <p class="traccia">Scrivi una funzione "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.</p>
+    <p>Seleziona la data che vuoi controllare</p>
+    <input type="date" id="inputDate">
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-10" class="esercizio">
+    <h2>Esercizio Funzioni 10</h2>
+    <p class="traccia">Scrivi una funzione "isTodayMyBirthday" che ritorna true se oggi è il tuo compleanno, falso negli altri casi.</p>
+    <p>Seleziona la data che vuoi controllare</p>
+    <input type="date" id="birthdayDate">
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-11 Arrays & Oggetti" class="esercizio">
+    <h2>Esercizio 11</h2>
+    <p class="traccia">Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
+        in esso la proprietà chiamata come la stringa passata come secondo parametro.</p>
+    <p class="soluzione">Vedi console log esercizio-11 Arrays & Oggetti</p>
+</div>
+<div id="esercizio-12" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia">Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.</p>
+    
+    
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+<div id="esercizio-" class="esercizio">
+    <h2>Esercizio C</h2>
+    <p class="traccia"></p>
+    <p class="soluzione"></p>
+</div>
+
+<script src="script/script.js" ></script>
+</body>
+</html>

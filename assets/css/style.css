@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.esercizio {
+    border: 1px solid #cccccc88;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+h2 {
+    color: black;
+}
+.traccia {
+    font-weight: bold;
+}
+.soluzione {
+    margin-top: 10px;
+}
